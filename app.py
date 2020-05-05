@@ -31,7 +31,11 @@ def dash():
     name = session['Uname']
     role = session['Urole']
     details=[name,role]
-    return render_template('DashBoard.html',result=[details])
+    cursor = mydb.cursor(buffered=True)
+    sql_select_query = "SELECT COUNT(email) FROM employees"
+    cursor.execute(sql_select_query)
+    record = cursor.fetchall()
+    return render_template('DashBoard.html',result=[details,record])
 
 @app.route("/predict")
 def predict():
