@@ -1,0 +1,172 @@
+
+/*css =======================*/
+.image-editor {
+    background: #fff;
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+.image-wrp {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+    /*background: rgba(0,0,0,0.5);*/
+
+}
+
+.cropit-preview {
+    background-color: #f8f8f8;
+    background-size: cover;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin:10% auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50% !important;
+}
+.no-background {
+    border: none;
+    background: transparent;
+}
+.dash-br {
+    border: 2px dashed #eee;
+}
+.solid-br {
+    border: 2px solid #eee;
+}
+.cropit-preview-image-container {
+    cursor: move;
+    border-radius: 50% !important;
+}
+/* Translucent background image */
+.cropit-preview-background {
+    opacity: .2;
+}
+input.cropit-image-zoom-input {
+    position: relative;
+}
+
+/* Limit the background image by adding overflow: hidden */
+#image-cropper {
+    overflow: hidden;
+}
+
+.image-size-label {
+    margin-top: 10px;
+}
+
+input {
+    display: block;
+}
+.action-wrp {
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+}
+.upload {
+    width: 35px;
+    height: 35px;
+    background-color: #434849; 
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    float: left;
+}
+.upload::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 10px;
+    top: 9px;
+    background: url("../../../images/system/icon/button/15/ic_15_img_upload.svg");
+}
+.upload-wrp {
+    display: table;
+    margin: 0 auto 10px;
+}
+.upload-wrp span {
+    color: #434849; 
+    font-size: 14px;
+    margin: 7px 10px;
+    display: inline-block;
+
+}
+.upload input[type="file"]{
+    height: inherit;
+    left: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    top: 0;
+    width: inherit;
+    cursor: pointer;
+}
+.range-slider {
+    display: block;
+    height: 35px;
+    margin: 0 auto;
+    padding-top: 8px;
+    width: 80%;
+}
+.range-slider .slide {
+    width: 100%;
+    height: 8px;
+    border-radius: 20px;
+    background: #eee;
+    position: relative;
+}
+.range-slider .slide .drag-bar {
+    width: 20px;
+    position: absolute;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 5px #000;
+    top: 0;
+    left: 0;
+}
+.range-slider::after {
+    clear: both;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.5);
+    border: 1px solid #eee;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.5);
+    border: 1px solid #eee;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+.dist {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+}
+.dist p {
+    color: #ccc;
+    font-weight: 600;
+    font-size: 25px;
+    padding: 0 15px;
+    text-align: center;
+}
+.dist img {
+    display: table;
+    margin: 20px auto;
+}
+.upload-note {
+    color: rgba(67, 72, 73, 0.56);
+    font-size: 12px;
+}

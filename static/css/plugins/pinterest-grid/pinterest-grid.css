@@ -1,0 +1,33 @@
+#blog-landing {
+    margin-top: 81px;
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+}
+
+
+.white-panel {
+    position: absolute;
+    background: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    border-radius: 2px;
+
+}
+
+.white-panel h1 {
+    font-size: 1em;
+}
+
+.white-panel h1 a {
+    color: #A92733;
+}
+
+.white-panel:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    margin-top: -5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}

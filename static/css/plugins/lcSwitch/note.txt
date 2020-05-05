@@ -1,0 +1,7 @@
+/**
+ * lc_switch.js
+ * Version: 1.0
+ * Author: LCweb - Luca Montanari
+ * Website: http://www.lcweb.it
+ * Licensed under the MIT license
+ */

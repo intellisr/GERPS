@@ -1,0 +1,118 @@
+
+<!Doctype html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/bootstrap.css') }}">
+        <script src="{{ url_for('static', filename = 'js/jquery-1.11.2.min.js') }}"></script> 
+        <script src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}"></script>   
+   <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 1050px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-image: linear-gradient(to bottom right, #00ffff 13%, #0099ff 97%);
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+
+    body {
+      background-image: linear-gradient(to bottom right, #ccffff 0%, #ffffcc 100%);
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h1 style="color:royalblue;text-shadow: blueviolet;">G.E.R.P.S</h1>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="{{url_for('dash')}}">Dashboard</a></li>
+        <li><a href="{{url_for('predict')}}">Predict</a></li>
+        <li><a href="{{url_for('admin')}}">Manage Admins</a></li>
+        <li><a href="{{url_for('logout')}}">logout</a></li>
+      </ul><br>
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+
+      <div class="well" style="background-image:linear-gradient(to bottom right, #00ffff 13%, #0099ff 97%);">        
+        <p style="font-size:50px;color: rgb(72, 100, 226);">Garment Employee Resignation Prediction System</p>
+        <p style="font-size:20px;color: rgb(39, 47, 85);">{{result[0][1]}} : {{result[0][0]}}</p>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well" style="background-image: linear-gradient(to bottom, orange , yellow);">
+            <h4>Users</h4>
+            <p>1 Million</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well" style="background-image: linear-gradient(to bottom, orange , yellow);">
+            <h4>Pages</h4>
+            <p>100 Million</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well" style="background-image: linear-gradient(to bottom, orange , yellow);">
+            <h4>Sessions</h4>
+            <p>10 Million</p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well" style="background-image: linear-gradient(to bottom, orange , yellow);">
+            <h4>Bounce</h4>
+            <p>30%</p> 
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="well" style="background-image: linear-gradient(to bottom, orange , yellow);">
+            <p>Text</p> 
+            <p>Text</p> 
+            <p>Text</p> 
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well" style="background-image: linear-gradient(to bottom, orange , yellow);">
+            <p>Text</p> 
+            <p>Text</p> 
+            <p>Text</p> 
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well" style="background-image: linear-gradient(to bottom, orange , yellow);">
+            <p>Text</p> 
+            <p>Text</p> 
+            <p>Text</p> 
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="well" style="background-image: linear-gradient(to bottom, orange , yellow);">
+            <p>Text</p> 
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well" style="background-image: linear-gradient(to bottom, orange , yellow);">
+            <p>Text</p> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

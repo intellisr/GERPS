@@ -1,0 +1,173 @@
+<!Doctype html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/bootstrap.css') }}">
+        <script src="{{ url_for('static', filename = 'js/jquery-1.11.2.min.js') }}"></script> 
+        <script src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css') }}.">
+        <link href="{{ url_for('static', filename = 'css/custom/button.css') }}" rel="stylesheet" />
+        <link href="{{ url_for('static', filename = 'css/custom/common.css') }}" rel="stylesheet" />
+        <link href="{{ url_for('static', filename = 'css/custom/mainmenu.css') }}" rel="stylesheet" />
+        <link href="{{ url_for('static', filename = 'css/custom/form.css') }}" rel="stylesheet" />
+        <link href="{{ url_for('static', filename = 'css/custom/accordion.css') }}" rel="stylesheet" />   
+        <style>
+          /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+          .row.content {height: 1050px}
+          
+          /* Set gray background color and 100% height */
+          .sidenav {
+            background-image: linear-gradient(to bottom right, #00ffff 13%, #0099ff 97%);
+            height: 100%;
+          }
+              
+          /* On small screens, set height to 'auto' for the grid */
+          @media screen and (max-width: 767px) {
+            .row.content {height: auto;} 
+          }
+      
+          body {
+            background-image: linear-gradient(to bottom right, #ccffff 0%, #ffffcc 100%);
+          }
+      
+        </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h1 style="color:royalblue;text-shadow: blueviolet;">G.E.R.P.S</h1>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="{{url_for('dash')}}">Dashboard</a></li>
+        <li><a href="{{url_for('predict')}}">Predict</a></li>
+        <li class="active"><a href="{{url_for('admin')}}">Manage Admins</a></li>
+        <li><a href="{{url_for('logout')}}">logout</a></li>
+      </ul><br>
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+      <div class="container main-wrapper" style="max-height:50%;padding-top: 100px;">
+        <div class="contert-wrapper pb-15">                
+               <h1 class="title pb-20 pr-30" style="color:lightskyblue;">Manage Admins</h1>
+                <form action ="http://localhost:5000/addadmin" method = "post" name="form">   
+                                       <div class="row form-row">
+                                           
+                                           <div class="col-md-6 ">
+                                               <h4 class="title">Employee ID</h4>
+                                               <input type="text" id="id" name="id" value="">
+                                           </div>
+                                           
+                                           <div class="col-md-6 ">
+                                               <h4 class="title">Employee Name</h4>
+                                               <input type="text" id="en"  name="name" value="">
+                                           </div>
+                                        
+                                        </div>
+
+                                        <div class="row form-row">
+                                          <div class="col-md-6 ">
+
+                                            <h4 class="title">Password</h4>
+                                            <input type="password" id="pw"  name="pw" value="">
+
+                                          </div>
+
+                                           <div class="col-sm-6 ">
+                                               <h4 class="title">Employee Role</h4>
+                                               <div class="form-group">
+                                                <select class="form-control" id="er" name="role">
+                                                  <option>Employee</option>
+                                                  <option>Admin</option>
+                                                  <option>Super Admin</option>
+                                                </select>
+                                              </div>
+                                           </div>
+
+                                        </div>    
+                                       
+               
+                                       <div class="row form-row">
+                                           
+                                           <div class="col-sm-3 ">
+                                                   <button type="submit" class="bx-but bx-default" name="save" onclick="" >Add</button>
+                                           </div>
+                                           
+                                           <div class="col-sm-3 ">
+                                                   <button type="button" class="bx-but bx-back center" name="save" onclick="update()" >Update</button>
+                                           </div>
+                                           
+                                           <div class="col-sm-3 ">
+                                                   <button type="button" class="bx-but bx-save" name="save" onclick="Delete()" >Delete</button>
+                                           </div>
+                                           
+                                      </div>
+                                      
+                                           <p>{{msg}}</p>   
+               
+                     </form>
+               <table class="table table-hover">
+       <thead class="info">
+         <tr>
+           <th>Employee ID</th>
+           <th>Employee Name</th>
+           <th>Employee Role</th>
+         </tr>
+       </thead>
+       <tbody>
+       {% for value in result %}
+         <tr onclick="loadData('{{value[0]}}' ,'{{value[1]}}','{{value[2]}}','{{value[3]}}')">       
+           <td>{{ value[0] }}</td>
+           <td>{{ value[1] }}</td>
+           <td>{{ value[2] }}</td>
+         </tr>
+        {% endfor %}
+       </tbody>
+     </table>
+       
+         </div>
+      </div>   
+</div>
+
+</body>
+</html>
+
+<script>
+
+  function loadData(v1,v2,v3,v4){
+      $("#id").val(v1);
+      $("#id").prop("readonly", true);
+      $("#en").val(v2);
+      $("#pw").val(v4);
+      $("#er").val(v3);
+  }
+  
+  function update(){
+      $.ajax({
+              url: '/updateadmin',
+              data: $('form').serialize(),
+              type: 'POST',
+              success: function(response) {
+                  console.log(response);
+              },
+              error: function(error) {
+                  console.log(error);
+              }
+          });
+  }
+  
+  function Delete(){
+      $.ajax({
+              url: '/deleteadmin',
+              data: $('form').serialize(),
+              type: 'POST',
+              success: function(response) {
+                  console.log(response);
+              },
+              error: function(error) {
+                  console.log(error);
+              }
+          });
+  }
+  </script>

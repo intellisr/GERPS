@@ -1,0 +1,120 @@
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul,
+dd, dt, li, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object,
+a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span,
+strong, sub, sup, tt, var, legend, fieldset {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+/*    height: 100%;*/
+}
+img, fieldset{
+    border:0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, label{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+body, h1, h2, h3, h4, h5, h6, p{ 
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+} 
+body {
+    background: #F9F9F9;
+}
+h2, h3, h4, h5, h6, p, label, input, button,div{
+    font-family: 'Roboto', sans-serif;
+}
+a, a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
+
+/* ===========================================  
+font-size  
+============================================*/
+
+h1{
+    font-size: 34px;
+    font-weight: 300; 
+/*    font-family: 'Roboto', sans-serif;*/
+}
+h2{
+    font-size: 24px;
+    font-weight: 300;
+}
+h3{
+    font-size: 18px; 
+}
+h4{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #696969;
+}
+h5{
+    font-size: 14px; 
+}
+h6{
+    font-size: 12px; 
+    font-weight: 400;
+    line-height: 12px;
+}
+
+
+/*=============== Alert box ===================*/
+
+#popup_container {
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+}
+#popup_title {
+    color: #333333;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 40px; 
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #EEEEEE;
+}
+#popup_title:before {
+    background: url(../images/icon/alert.svg);
+    width: 30px;
+    height: 30px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top:-4px;
+} 
+#popup_message {
+    margin-bottom: 15px;
+    color: #4f453b;
+}
+input[type="button"].del-ok-but, input[type="button"].del-cancel-but {      
+    color: #f4f3ee;
+    float: right;
+    font-size: 12px;
+    font-weight: 500;
+    height: 30px;
+    padding: 0 10px;
+    border: none;
+    text-transform: uppercase;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+input[type="button"].del-ok-but {
+    background: #f26922; 
+}
+input[type="button"].del-cancel-but {
+    background: #A0A492; 
+    margin-right: 10px;
+}

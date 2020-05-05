@@ -1,0 +1,62 @@
+Gender
+Female-0
+Male-1
+
+Age
+Below 21 - 0
+21-30 - 1
+31-40 - 2
+41-50 - 3
+Above 51 - 4
+
+Marital
+marrid - 1
+unmarrid - 0
+Divorce - 3
+
+Education Qualification
+Below O/L -0
+O/L -1
+A/L -2
+Degree -3
+
+P.Qualification
+None - 0
+AAT - 1
+Diploma - 2
+ICAL -3
+Other - 4
+
+Department
+Production - 0
+Cutting Section -1
+Finishing Section -2
+Sample room and Maintanacne -3
+Other - 4
+
+Job Level
+Operational Level-0
+Staff Level -1
+Managerial Level -2
+
+Incentives
+Bonuses - 0
+Commissions - 1
+Allowances - 2
+
+Employment Category
+Permenent - 0
+Casual - 1
+contract -2
+
+L.Promotion
+Non - 0
+Within 6 month - 1
+Between 6 - 12month  - 2 
+More than 1 year - 3
+
+Training
+3 months - 0
+6 month - 1
+1 Year - 2
+More than 1 year - 3

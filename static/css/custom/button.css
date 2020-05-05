@@ -1,0 +1,948 @@
+/*==============================================================================
+           ---- Summery of Styles ----
+
+                01 Buttons
+                02 Box Button
+                03 Messages
+                04 Advanced Search
+                05 Validation Required
+                06 Breadcrumb
+                
+==============================================================================*/
+
+/*==============================================================================
+        01 Buttons
+==============================================================================*/
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+a.but,
+button.but,
+input.but[type="submit"],
+button.but-sm {
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    font-weight: 500;
+    float: right;
+    cursor: pointer;
+    margin: 15px 0 15px 30px;
+}
+
+a.but.white,
+button.but.white,
+input.but.white[type="submit"],
+button.but-sm.white {
+    color: #fff;
+}
+
+a.but > span,
+button.but > span,
+button.but-sm > span,
+button.but-sm-24 > span {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+button.but-sm {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+button.but-sm > span {
+    width: 22px;
+    height: 22px;
+}
+
+button.but-sm-24 > span {
+    width: 24px;
+    height: 24px;
+}
+
+.but-left {
+    float: left !important;
+}
+
+/* -----------------     a tag       ------------------- */
+a.edit {
+    color: #f9d452;
+}
+
+a.edit > span {
+    background: #f9d452 url(../../images/system/icon/button/15/ic_15_edit.png) no-repeat center center;
+}
+
+a.life-cycle:hover {
+    color: rgba(242, 105, 34, 0.7);
+}
+
+/*-- New--*/
+a.new {
+    color: rgba(110, 204, 224, 1);
+}
+
+a.new > span {
+    background: #6ecce0 url(../../images/system/icon/button/15/ic_15_new.svg) no-repeat center center;
+}
+
+a.new:hover {
+    color: rgba(110, 204, 224, 0.6);
+}
+
+/* -----------------      button       ------------------- */
+button.request {
+    color: #f26b55;
+}
+
+button.request > span {
+    background: #f26b55 url(../../images/system/icon/button/15/req-ic.png) no-repeat center center;
+}
+
+button.save,
+a.save {
+    color: #4fdb9b;
+}
+
+button.save > span,
+a.save > span {
+    background: #4fdb9b url(../images_new/save-ic.png) no-repeat center center;
+}
+
+button.download-excel,
+a.download-excel,
+button.view,
+a.view {
+    color: #434849;;
+}
+
+button.view > span,
+a.view > span {
+    background: #434849 url(../../images/system/icon/button/15/ic_15_view.png) no-repeat center center;
+}
+
+button.download-excel > span,
+a.download-excel > span {
+    background: #434849 url(../../images/system/icon/button/15/ic_15_excel.svg) no-repeat center center;
+}
+
+button.download-excel:hover,
+a.download-excel:hover,
+button.view:hover,
+a.view:hover {
+    color: rgba(67, 72, 73, 0.6);
+}
+
+button.download-pdf,
+a.download-pdf {
+    color: #434849;
+}
+
+button.download-pdf > span,
+a.download-pdf > span {
+    background: #434849 url(../../images/system/icon/button/15/ic_15_pdf.svg) no-repeat center center;
+}
+
+button.download-pdf:hover,
+a.download-pdf:hover {
+    color: rgba(67, 72, 73, 0.6);
+}
+
+button.download-word,
+a.download-pdf {
+    color: #434849;
+}
+
+button.download-word > span,
+a.download-pdf > span {
+    background: #434849 url(../../images/system/icon/button/15/word.svg) no-repeat center center;
+}
+
+button.download-word:hover,
+a.download-pdf:hover {
+    color: rgba(67, 72, 73, 0.6);
+}
+
+button.bulkupload,
+a.bulkupload {
+    color: #4fdb9b;
+}
+
+button.bulkupload > span,
+a.bulkupload > span {
+    background: #4fdb9b url(../../images/system/icon/button/15/ic_15_upload.svg) no-repeat center center;
+}
+
+button.bulkupload:hover,
+a.bulkupload:hover {
+    color: rgba(79, 219, 155, 0.6);
+}
+
+button.new,
+a.new {
+    color: #6ecce0;
+}
+
+button.new > span,
+a.new > span {
+    background: #6ecce0 url(../../images/system/icon/button/15/ic_15_new.svg) no-repeat center center;
+}
+
+button.new:hover,
+a.new:hover {
+    color: rgba(110, 204, 224, 0.6);
+}
+
+button.freeze,
+a.freeze {
+    color: #F26B55;
+}
+
+button.freeze > span,
+a.freeze > span {
+    background: #F26B55 url(../../images/system/icon/button/15/ic_15_freeze.svg) no-repeat center center;
+}
+
+button.freeze:hover,
+a.freeze:hover {
+    color: rgba(242, 107, 85, 0.6);
+}
+
+/*--Button Back--*/
+button.back {
+    color: rgba(101, 106, 107, 1);
+}
+
+button.back > span {
+    background: rgba(101, 106, 107, 1) url(../../images/system/icon/button/15/ic_15_back.svg) no-repeat center center;
+}
+
+button.back:hover {
+    color: rgba(101, 106, 107, 0.6);
+}
+
+/*--Button Next--*/
+button.next {
+    color: rgba(67, 72, 73, 1);
+}
+
+button.next > span {
+    background: rgba(67, 72, 73, 1) url(../../images/system/icon/button/15/ic_15_next.svg) no-repeat center center;
+}
+
+button.next:hover {
+    color: rgba(67, 72, 73, 0.7);
+}
+
+/*--Button Exit--*/
+button.exit {
+    color: rgba(242, 107, 85, 1);
+}
+
+button.exit > span {
+    background: rgba(242, 107, 85, 1) url(../../images/system/icon/button/15/ic_15_exit.svg) no-repeat center center;
+}
+
+button.exit:hover {
+    color: rgba(242, 107, 85, 0.7);
+}
+
+/*--Button Delete--*/
+button.delete {
+    color: rgba(242, 107, 85, 1);
+}
+
+button.delete > span {
+    background: rgba(242, 107, 85, 1) url(../../images/system/icon/button/15/ic_15_delete.svg) no-repeat center center;
+}
+
+button.delete:hover {
+    color: rgba(242, 107, 85, 0.7)
+}
+
+/*--Button user image change--*/
+button.camera {
+    color: rgba(242, 107, 85, 1);
+}
+
+button.camera > span {
+    background: rgba(242, 107, 85, 1) url(../../images/system/icon/button/15/ic_15_camera.svg) no-repeat 8px 9px;
+}
+
+button.camera:hover {
+    color: rgba(242, 107, 85, 0.7)
+}
+
+/*--Button Reject--*/
+button.b_reject {
+    color: rgba(242, 105, 34, 1)
+}
+
+button.b_reject > span {
+    background: rgba(242, 105, 34, 1) url(../../images/system/icon/button/15/ic_15_reject.svg) no-repeat center center;
+}
+
+button.reject:hover {
+    color: rgba(242, 105, 34, 0.7)
+}
+
+/*--Button Approve*/
+button.b_approve {
+    color: rgba(79, 219, 155, 1)
+}
+
+button.b_approve > span {
+    background: rgba(79, 219, 155, 1) url(../../images/system/icon/button/15/ic_15_approve.svg) no-repeat center center;
+}
+
+button.b_approve:hover {
+    color: rgba(79, 219, 155, 0.7);
+}
+
+/*Download*/
+button.downloads,
+a.downloads {
+    color: rgba(67, 72, 73, 1);
+}
+
+button.downloads span,
+a.downloads span {
+    background: rgba(67, 72, 73, 1) url(../../images/system/icon/button/15/ic_15_download.png) no-repeat center center;
+}
+
+button.downloads:hover,
+a.downloads:hover {
+    color: rgba(67, 72, 73, 0.7);
+}
+
+/*Upload*/
+button.upload,
+a.upload {
+    color: rgba(67, 72, 73, 1);
+}
+
+button.upload span,
+a.upload span {
+    background: rgba(67, 72, 73, 1) url(../../images/system/icon/button/15/ic_15_upload.svg) no-repeat center center;
+}
+
+button.upload:hover,
+a.upload:hover {
+    color: rgba(67, 72, 73, 0.7);
+}
+
+/*
+Small Button
+button size 24
+*/
+
+/*Add new button*/
+button.but-sm-24.new span,
+a.but-sm-24.new span {
+    background: url(../../images/system/icon/button/24/ic_24-plus-blue.png) no-repeat center center;
+}
+
+button.but-sm-24.new,
+a.but-sm-24.new {
+    color: rgba(73, 179, 204, 1);
+}
+
+button.but-sm-24.new:hover,
+a.but-sm-24.new:hover {
+    color: rgba(73, 179, 204, 0.86);
+}
+
+/*--Blue Camera --*/
+button.blue-camera {
+    color: rgb(255, 255, 255);
+}
+
+button.blue-camera > span {
+    background: rgba(255, 255, 255, 0.86) url(../../images/system/icon/button/15/ic_20_camara.png) no-repeat 8px 8px;
+}
+
+button.blue-camera:hover {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+/*--Facebook --*/
+button.facebook {
+    color: rgb(255, 255, 255);
+}
+
+button.facebook > span {
+    background: rgba(255, 255, 255, 0.86) url(../../images/system/icon/button/15/ic_20_facebook.png) no-repeat 7px 8px;
+}
+
+button.facebook:hover {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+/*--Linkedin --*/
+button.linkedin {
+    color: rgb(255, 255, 255);
+}
+
+button.linkedin > span {
+    background: rgba(255, 255, 255, 0.86) url(../../images/system/icon/button/15/ic_20_linkedin.png) no-repeat 8px 6px;
+}
+
+button.linkedin:hover {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+button.linkedin:hover span,
+button.facebook:hover span,
+button.blue-camera:hover span {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/*--Download --*/
+button.download-white {
+    color: rgb(255, 255, 255);
+}
+
+button.download-white > span {
+    background: rgba(255, 255, 255, 1) url(../../images/system/icon/button/10/ic_10_arrow-down-blue.png) no-repeat 12px 10px;
+}
+
+button.download-white:hover {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+/*Download blue*/
+button.download-blue {
+    color: #49b3cc;
+}
+
+button.download-blue > span {
+    background: #49b3cc url(../../images/system/icon/button/10/ic_10_arrow-down.png) no-repeat 12px 10px;
+}
+
+button.download-blue:hover {
+    color: rgba(73, 179, 204, 0.86);
+}
+
+/*==============================================================================
+        06 Box Button
+==============================================================================*/
+
+button.bx-but,
+a.bx-but,
+button.bx-sm-but,
+a.bx-sm-but {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    padding: 10px 30px;
+    margin: 15px 0 15px 15px;
+    float: right;
+    color: rgba(255, 255, 255, 0.86);
+    font-weight: 400;
+    font-size: 14px;
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: all ease-in-out 0.5s;
+    -o-transition: all ease-in-out 0.5s;
+    -ms-transition: all ease-in-out 0.5s;
+    -moz-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+    z-index: 9;
+}
+
+button.bx-sm-but,
+a.bx-sm-but {
+    padding: 8px 15px;
+    /*margin: 10px 0 10px 10px;*/
+    font-size: 12px;
+    line-height: 12px;
+}
+
+button.bx-but.bx-but-full,
+a.bx-but.bx-but-full,
+button.bx-sm-but.bx-but-full,
+a.bx-sm-but.bx-but-full {
+    width: 100%;
+}
+
+button.bx-but,
+button.bx-sm-but {
+    border: none;
+    outline: 0;
+}
+
+button.bx-mt-0,
+a.bx-mt-0 {
+    margin-top: 0;
+}
+
+button.bx-mb-0,
+a.bx-mb-0 {
+    margin-bottom: 0;
+}
+
+button.bx-ml-0,
+a.bx-ml-0 {
+    margin-left: 0;
+}
+
+button.bx-m-0,
+a.bx-m-0 {
+    margin: 0;
+}
+
+a.bx-but .bx-animate-container,
+button.bx-sm-but .bx-animate-container,
+button.bx-but .bx-animate-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+a.bx-but .bx-animate-container .bx-animate,
+button.bx-sm-but .bx-animate-container .bx-animate,
+button.bx-but .bx-animate-container .bx-animate {
+    position: absolute;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.50);
+    transform: scale(0);
+    opacity: 0;
+    /*-webkit-transition: all 0.8s ease;*/
+    /*-moz-transition: all 0.8s ease;*/
+    /*-ms-transition: all 0.8s ease;*/
+    /*-o-transition: all 0.8s ease;*/
+    /*transition: all 0.8s ease;*/
+}
+
+a.bx-but .bx-animate-container .bx-animate.bx-animated,
+button.bx-sm-but .bx-animate-container .bx-animate.bx-animated,
+button.bx-but .bx-animate-container .bx-animate.bx-animated {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    opacity: 1;
+}
+
+a.bx-but .bx-animate-container .bx-animated-clear,
+button.bx-sm-but .bx-animate-container .bx-animated-clear,
+button.bx-but .bx-animate-container .bx-animated-clear {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    opacity: 0;
+}
+
+/*--------------- Save --------------------*/
+.bx-save,
+.bx-sm-save {
+    background: #e60000;
+}
+
+.bx-save:hover,
+.bx-sm-save:hover {
+    /*background: #3AC686;*/
+}
+
+/*--------------- Delete, Exit,Search --------------------*/
+.bx-delete,
+.bx-exit,
+.bx-search {
+    background: #F26B55;
+}
+
+/*--------------- Edit --------------------*/
+.bx-edit {
+    background: #FF8A4E;
+}
+
+.bx-delete:hover,
+.bx-edit:hover,
+.bx-exit:hover,
+.bx-search:hover {
+    /*background: #b65b4c;*/
+}
+
+/*--------------- Next, View,Clear,Download PDF --------------------*/
+.bx-next,
+.bx-view,
+.bx-download-pdf,
+.bx-clear {
+    background: #434849;
+}
+
+.bx-next:hover,
+.bx-view:hover,
+.bx-download-pdf:hover,
+.bx-clear:hover {
+    /*background: #323232;*/
+}
+
+/*--------------- Back --------------------*/
+.bx-back {
+    background: #656A6B;
+}
+
+.bx-back:hover {
+    /*background: #4e5354;*/
+}
+
+/*--------------- Default --------------------*/
+
+.bx-default {
+    background: #f26922;
+}
+
+.bx-default:hover {
+    /*background: #d64d06;*/
+}
+
+/*--------------- Hold --------------------*/
+
+.bx-hold {
+    background: #f9d452;
+}
+
+.bx-hold:hover {
+    /*background: #FFDA53;*/
+}
+
+/*--------------- Hold --------------------*/
+
+.bx-blue {
+    background: #49b3cc;
+}
+
+.bx-blue:hover {
+    /*background: rgba(73, 179, 204, 0.87);*/
+}
+
+/*==============================================================================
+        03 Image Buttons
+==============================================================================*/
+.img-but,
+button.img-but,
+a.img-but {
+    padding: 10px;
+    border: 0;
+    display: block;
+    position: relative;
+    float: right;
+    margin-left: 10px;
+}
+
+.img-but.img-center,
+button.img-but.img-center,
+a.img-but.img-center {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
+
+.img-save,
+button.img-save,
+a.img-save {
+    background: url('../../images/system/icon/button/20/ic_20_save.svg') no-repeat center center;
+}
+
+.img-save:hover,
+button.img-save:hover,
+a.img-save:hover {
+    opacity: 0.8;
+}
+
+.img-view,
+button.img-view,
+a.img-view {
+    background: url('../../images/system/icon/button/20/ic_20_view.png') no-repeat center center;
+}
+
+.img-view:hover,
+button.img-view:hover,
+a.img-view:hover {
+    opacity: 0.8;
+}
+
+/*Edit*/
+.img-edit,
+button.img-edit,
+a.img-edit {
+    background: url('../../images/system/icon/button/20/ic_20_edit.svg') no-repeat center center;
+}
+
+.img-edit:hover,
+button.img-edit:hover,
+a.img-edit:hover {
+    opacity: 0.8;
+}
+
+/*Delete*/
+.img-delete,
+button.img-delete,
+a.img-img-delete {
+    background: url('../../images/system/icon/button/20/ic_20_delete.svg') no-repeat center center;
+}
+
+.img-delete:hover,
+button.img-delete:hover,
+a.img-delete:hover {
+    opacity: 0.8;
+}
+
+/*Cross*/
+.img-cross,
+button.img-cross,
+a.img-cross {
+    background: url('../../images/system/icon/button/20/ic_20-cross-red.png') no-repeat center center;
+}
+
+.img-cross:hover,
+button.img-cross:hover,
+a.img-cross:hover {
+    opacity: 0.8;
+}
+
+.img-add,
+button.img-add,
+a.img-add {
+    background: url('../../images/system/icon/button/20/ic_20_add.png') no-repeat center center;
+}
+
+.img-add:hover,
+button.img-add:hover,
+a.img-add:hover {
+    opacity: 0.8;
+}
+
+.img-reject,
+button.img-reject,
+a.img-reject {
+    background: url('../../images/system/icon/button/20/ic_20_reject.svg') no-repeat center center;
+}
+
+.img-reject:hover,
+button.img-reject:hover,
+a.img-reject:hover {
+    opacity: 0.8;
+}
+
+.img-close-gray,
+button.img-close-gray,
+a.img-close-gray {
+    background: url('../../images/system/icon/button/20/ic_20_close-gray.png') no-repeat center center;
+}
+
+.img-close-gray:hover,
+button.img-close-gray:hover,
+a.img-close-gray:hover {
+    opacity: 0.8;
+}
+
+button.hide-but,
+a.hide-but {
+    display: none;
+}
+
+/*more button*/
+.img-more,
+button.img-more,
+a.img-more {
+    width: 15px;
+    height: 35px;
+    padding: 0;
+    background: url('../../images/system/icon/button/15/ic_15_v-3-dot.png') no-repeat center center;
+}
+
+.img-more.img-10,
+button.img-more.img-10,
+a.img-more.img-10 {
+    width: 10px;
+    height: 30px;
+    padding: 0;
+    background: url('../../images/system/icon/button/10/ic_10_v-3-dot.png') no-repeat center center;
+}
+
+.img-more:hover,
+button.img-more:hover,
+a.img-more:hover {
+    opacity: 1;
+}
+
+.img-delete.with-text {
+    background-position: 0 center;
+}
+
+.img-delete.with-text span {
+    margin-left: 15px;
+    display: inline-block;
+    color: rgba(78, 79, 75, 0.86);
+}
+
+/*==============================================================================
+        03 Messages
+==============================================================================*/
+.msg-wrpper {
+    display: table;
+}
+
+.message {
+    padding: 12px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px 0;
+    display: none;
+    border-radius: 3px;
+    text-align: left;
+}
+
+/*.success-msg,
+.info-msg,
+.error-msg {
+    display: block;
+    padding: 12px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px 0;
+    display: none;
+    border-radius: 3px ;
+}*/
+.success {
+    background: #93E9C2;
+}
+
+.info {
+    background: #E2F7FD;
+    color: #f5756c;
+}
+
+.error {
+    background: #FDF5E2;
+    color: #F26B55;
+}
+
+/*.success-msg {
+    background: #93E9C2;
+}
+.info-msg {
+    background: #E2F7FD;
+    color: #6ecce0;
+}
+.error-msg {
+    background: #FDF5E2;
+    color: #F26B55;
+}*/
+
+/*==============================================================================
+        04 Advanced Search
+==============================================================================*/
+
+input.ad-search[type="button"] {
+    background: #f26b55;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgba(256, 256, 256, 0.86);
+    padding: 10px 30px;
+    border: none;
+    margin: 0;
+    float: right;
+    position: relative;
+    border-radius: 0;
+}
+
+/*==============================================================================
+        05 Validation Required
+==============================================================================*/
+
+span.required {
+    background: #f26b55;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 6px;
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 6px;
+}
+
+.control-label span, .note span {
+    vertical-align: super;
+    margin: 0 5px;
+}
+
+.note span {
+    vertical-align: text-top;
+}
+
+/*==============================================================================
+        06 Breadcrumb
+==============================================================================*/
+
+.bread-crumb-wrp {
+    display: inline-block;
+    margin: 15px 30px 0;
+}
+
+.with-mb {
+    margin-bottom: 10px;
+}
+
+.bread-crumb-wrp a {
+    color: rgba(78, 79, 75, 0.7);
+    font-size: 14px;
+    font-weight: 400;
+    float: left;
+    padding: 0 10px;
+    letter-spacing: 0.01em;
+    position: relative;
+    text-transform: capitalize;
+}
+
+.bread-crumb-wrp a:first-child {
+    padding: 0 10px 0 0;
+}
+
+.bread-crumb-wrp a:last-child {
+    pointer-events: none;
+    color: rgba(78, 79, 75, 0.5);
+}
+
+.bread-crumb-wrp a:not(:first-child)::before {
+    position: absolute;
+    content: '|';
+    left: -1px;
+    color: rgba(78, 79, 75, 0.5);
+}
+
+/*warning symbol*/
+.warning-symbol span{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background:  rgb(249, 212, 82) url('../../images/system/icon/button/15/warning.svg') no-repeat center center;
+}
+.warning-symbol h5.details{
+   color: rgba(67, 72, 73, 0.56) !important;
+}
+

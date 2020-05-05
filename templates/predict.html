@@ -1,0 +1,219 @@
+<!Doctype html>
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename = 'css/bootstrap.css') }}">
+      <script src="{{ url_for('static', filename = 'js/jquery-1.11.2.min.js') }}"></script> 
+      <script src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}"></script>
+      <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css') }}">
+      <link href="{{ url_for('static', filename = 'css/custom/button.css') }}" rel="stylesheet" />
+      <link href="{{ url_for('static', filename = 'css/custom/common.css') }}" rel="stylesheet" />
+      <link href="{{ url_for('static', filename = 'css/custom/mainmenu.css') }}" rel="stylesheet" />
+      <link href="{{ url_for('static', filename = 'css/custom/form.css') }}" rel="stylesheet" />
+      <link href="{{ url_for('static', filename = 'css/custom/accordion.css') }}" rel="stylesheet" />   
+      <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {height: 1050px}
+        
+        /* Set gray background color and 100% height */
+        .sidenav {
+          background-image: linear-gradient(to bottom right, #00ffff 13%, #0099ff 97%);
+          height: 100%;
+        }
+            
+        /* On small screens, set height to 'auto' for the grid */
+        @media screen and (max-width: 767px) {
+          .row.content {height: auto;} 
+        }
+    
+        body {
+          background-image: linear-gradient(to bottom right, #ccffff 0%, #ffffcc 100%);
+        }
+    
+      </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h1 style="color:royalblue;text-shadow: blueviolet;">G.E.R.P.S</h1>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="{{url_for('dash')}}">Dashboard</a></li>
+        <li class="active"><a href="{{url_for('predict')}}">Predict</a></li>
+        <li><a href="{{url_for('admin')}}">Manage Admins</a></li>
+        <li><a href="{{url_for('logout')}}">logout</a></li>
+      </ul><br>
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+        <div class="container main-wrapper" style="max-height:50%;padding-top: 100px;">
+          <div class="contert-wrapper pb-15">                
+                 <h1 class="title pb-20 pr-30" style="color:lightskyblue;">Manage Admins</h1>
+                  <form action ="http://localhost:5000/predict_data" method = "post" name="form">   
+                                         <div class="row form-row">
+                                             
+                                             <div class="col-sm-4 ">
+                                                 <h4 class="title">Gender</h4>
+                                                 <div class="form-group">
+                                                  <select class="form-control" id="sel1" name="a">
+                                                    <option value="0">Female</option>
+                                                    <option value="1">Male</option>
+                                                  </select>
+                                                </div>
+                                             </div>
+                                             
+                                             <div class="col-sm-4 ">
+                                                 <h4 class="title">Age</h4>
+                                                 <div class="form-group">
+                                                  <select class="form-control" id="sel1" name="b">
+                                                    <option value="0">Below 21</option>
+                                                    <option value="1">21-30</option>
+                                                    <option value="2">31-40</option>
+                                                    <option value="3">41-50/option>
+                                                    <option value="4">Above 51</option>
+                                                  </select>
+                                                </div>
+                                             </div>
+                                             
+                                             <div class="col-sm-4 ">
+                                                 <h4 class="title">
+                                                  Marital</h4>
+                                                 <div class="form-group">
+                                                  <select class="form-control" id="sel1" name="c">
+                                                    <option value="0">Married </option>
+                                                    <option value="1">UnMarried</option>
+                                                    <option value="2">Divorce</option>
+                                                  </select>
+                                                </div>
+                                             </div>
+                                             
+                                         </div>
+
+
+                                         <div class="row form-row">
+                                             
+                                          <div class="col-sm-4 ">
+                                              <h4 class="title">Education Qualification</h4>
+                                              <div class="form-group">
+                                               <select class="form-control" id="sel1" name="d">
+                                                <option value="0">Below O/L</option>
+                                                <option value="1">O/L</option>
+                                                <option value="2">A/L</option>
+                                                <option value="3">Degree</option>
+                                               </select>
+                                             </div>
+                                          </div>
+                                          
+                                          <div class="col-sm-4 ">
+                                              <h4 class="title">Professional Qualification</h4>
+                                              <div class="form-group">
+                                               <select class="form-control" id="sel1" name="e">
+                                                <option value="0">None</option>
+                                                <option value="1">AAT</option>
+                                                <option value="2">Diploma</option>
+                                                <option value="3">ICAL</option>
+                                                <option value="4">Other</option>
+                                               </select>
+                                             </div>
+                                          </div>
+                                          
+                                          <div class="col-sm-4 ">
+                                              <h4 class="title">
+                                                Department</h4>
+                                              <div class="form-group">
+                                               <select class="form-control" id="sel1" name="f">
+                                                <option value="0">Production</option>
+                                                <option value="1">Cutting Section</option>
+                                                <option value="2">Finishing Section</option>
+                                                <option value="3">Sample room and Maintanacne</option>
+                                                <option value="4">Other</option>
+                                               </select>
+                                             </div>
+                                          </div>
+                                          
+                                          </div>
+
+                                          <div class="row form-row">
+                                             
+                                            <div class="col-sm-4 ">
+                                                <h4 class="title">Job Level</h4>
+                                                <div class="form-group">
+                                                 <select class="form-control" id="sel1" name="g">
+                                                  <option value="0">Operational Level</option>
+                                                  <option value="1">Staff Level</option>
+                                                  <option value="2">Managerial Level</option>
+                                                 </select>
+                                               </div>
+                                            </div>
+                                            
+                                            <div class="col-sm-4 ">
+                                                <h4 class="title">Incentives</h4>
+                                                <div class="form-group">
+                                                 <select class="form-control" id="sel1" name="h">
+                                                  <option value="0">Bonuses</option>
+                                                  <option value="1">Commissions</option>
+                                                  <option value="2">Allowances</option>
+                                                 </select>
+                                               </div>
+                                            </div>
+                                            
+                                            <div class="col-sm-4 ">
+                                                <h4 class="title">Employment Category</h4>
+                                                <div class="form-group">
+                                                 <select class="form-control" id="sel1" name="i">
+                                                  <option value="0">Permenent</option>
+                                                  <option value="1">Casual</option>
+                                                  <option value="2">Contract</option>
+                                                 </select>
+                                               </div>
+                                            </div>
+                                            
+                                            </div>
+
+                                            <div class="row form-row">
+                                             
+                                              <div class="col-sm-4 ">
+                                                  <h4 class="title">Promotion</h4>
+                                                  <div class="form-group">
+                                                   <select class="form-control" id="sel1" name="j">
+                                                    <option value="0">Non</option>
+                                                    <option value="1">Within 6 month</option>
+                                                    <option value="2">Between 6 - 12month</option>
+                                                    <option value="3">More than 1 year</option>
+                                                   </select>
+                                                 </div>
+                                              </div>
+                                              
+                                              <div class="col-sm-4 ">
+                                                  <h4 class="title">Training</h4>
+                                                  <div class="form-group">
+                                                   <select class="form-control" id="sel1" name="k">
+                                                    <option value="0">3 Months</option>
+                                                    <option value="1">6 Month</option>
+                                                    <option value="2">1 Year</option>
+                                                    <option value="3">More than 1 Year</option>
+                                                   </select>
+                                                 </div>
+                                              </div>
+                                              
+                                              </div>
+                 
+                                         <div class="row form-row">
+                                             
+                                             <div class="col-md-12">
+                                                     <button type="submit" class="bx-but bx-default" name="save" >Predict</button>
+                                             </div>
+                                             
+                                        </div> 
+                 
+                  </form>
+                  <h2 style="color:rgb(87, 102, 240)">{{result}}</h2>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
